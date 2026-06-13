@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Marriage Biodata - Raj Singh</title>
+    <style>
+        /* रंगीन बैकग्राउंड और बेसिक सेटिंग */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff9a44 0%, #fc6076 100%);
+            margin: 0;
+            padding: 20px 10px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* मुख्य कंटेनर जिसमें एनिमेशन है */
+        .biodata-container {
+            background-color: #ffffff;
+            max-width: 100%;
+            width: 100%;
+            padding: 25px 15px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 4px solid #FFD700; /* गोल्ड बॉर्डर */
+            animation: slideInDown 1.2s ease-out;
+            box-sizing: border-box;
+        }
+
+        /* हैडर और गणेश जी का एनिमेशन */
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .ganesha {
+            color: #d35400;
+            font-size: 28px;
+            font-weight: bold;
+            animation: pulseText 2s infinite;
+            margin-bottom: 10px;
+        }
+        .title {
+            background: linear-gradient(to right, #c0392b, #8e44ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #FFD700;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* फोटो सेक्शन और ग्लो एनिमेशन */
+        .photo-section {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        .photo-section img {
+            width: 150px;
+            height: 190px;
+            object-fit: cover;
+            border: 6px solid #FFD700;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            animation: glow 3s infinite alternate;
+        }
+
+        /* सेक्शन टाइटल का डिज़ाइन */
+        .section-title {
+            background: linear-gradient(135deg, #800000 0%, #c0392b 100%);
+            color: #FFFFFF;
+            padding: 10px 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        /* टेबल और टेक्स्ट का डिज़ाइन */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+        td {
+            padding: 10px 5px;
+            font-size: 16px;
+            border-bottom: 1px dashed #e0e0e0;
+            animation: fadeInUp 1s ease-out both;
+        }
+        /* हर लाइन को अलग-अलग समय पर एनिमेट करने के लिए */
+        tr:nth-child(1) td { animation-delay: 0.2s; }
+        tr:nth-child(2) td { animation-delay: 0.4s; }
+        tr:nth-child(3) td { animation-delay: 0.6s; }
+        tr:nth-child(4) td { animation-delay: 0.8s; }
+        tr:nth-child(5) td { animation-delay: 1.0s; }
+
+        .label {
+            font-weight: bold;
+            color: #c0392b;
+            width: 40%;
+            vertical-align: top;
+        }
+        .value {
+            width: 60%;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        /* ---------------- एनिमेशन (Keyframes) ---------------- */
+        @keyframes slideInDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pulseText {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; text-shadow: 0 0 10px #ff9a44; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 10px rgba(255, 215, 0, 0.4); }
+            to { box-shadow: 0 0 25px rgba(255, 215, 0, 0.9); }
+        }
+        @keyframes fadeInLeft {
+            from { transform: translateX(-30px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="biodata-container">
+    <div class="header">
+        <div class="ganesha">।। श्री गणेशाय नमः ।।</div>
+        <div class="title">बायोडाटा</div>
+    </div>
+
+    <div class="photo-section">
+        <img src="https://via.placeholder.com/150x190/FFD700/800000?text=Photo+Here" alt="Raj Singh">
+    </div>
+
+    <div class="section-title">व्यक्तिगत विवरण</div>
+    <table>
+        <tr><td class="label">नाम:</td><td class="value"> श्री राज सिंह शक्तावत</td></tr>
+        <tr><td class="label">जन्म तिथि:</td><td class="value">8 अगस्त 2001</td></tr>
+        <tr><td class="label">शिक्षा:</td><td class="value">बी.एससी. (गणित), बी.एड., एम.ए.</td></tr>
+        <tr><td class="label">ऊंचाई:</td><td class="value">5'11"</td></tr>
+    </table>
+
+    <div class="section-title">पारिवारिक विवरण</div>
+    <table>
+        <tr><td class="label">पिता का नाम:</td><td class="value">श्री देवी सिंह शक्तावत (अचलावत)</td></tr>
+        <tr><td class="label">पिता का व्यवसाय:</td><td class="value">सरकारी सेवा (ASI, राजस्थान पुलिस)</td></tr>
+        <tr><td class="label">माता का नाम:</td><td class="value">श्रीमती गुड्डू कंवर (कुशल गृहिणी)</td></tr>
+        <tr><td class="label">ठिकाना:</td><td class="value">माल का खेड़ा, तहसील - मांडलगढ़</td></tr>
+        <tr><td class="label">ननिहाल:</td><td class="value">भवानी पुरा, नेगढ़ (ज़िला - बूंदी)<br>सोलंकी (डूंगरपोता)</td></tr>
+    </table>
+
+    <div class="section-title">संपर्क विवरण</div>
+    <table>
+        <tr><td class="label">मोबाइल नंबर:</td><td class="value">9982637647</td></tr>
+        <tr><td class="label">वर्तमान पता:</td><td class="value">देवनारायण सर्कल, 100 फीट रोड,<br>राधे डेयरी के पास house no. 9 Shanta vihar </td></tr>
+    </table>
+</div>
+
+</body>
+</html>
